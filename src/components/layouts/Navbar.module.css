@@ -5,6 +5,19 @@
     padding: 1em;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffbb33;
+}
+.logo span{
+   margin-left:0.5em;
+   font-size: 40px;
+   font-weight: bold;
+}
+
 .list{
     display: flex;
     list-style: none;

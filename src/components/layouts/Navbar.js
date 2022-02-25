@@ -9,10 +9,13 @@ function Navbar(){
     return(
         <nav className={styles.navbar}>
             <Container>
-                <Link to='/'>
+                <section>
+                <Link className={styles.logo} to='/'>
                     <img src={logo} alt='manager'/>
+                    <span>Costs</span>
                 </Link>
                 
+                </section>
                 <ul className={styles.list}>
                     <li className={styles.item}><Link to="/">Home</Link></li>
                     <li className={styles.item}><Link to="/projects">Projetos</Link></li>
