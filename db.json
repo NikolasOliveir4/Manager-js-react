@@ -1,26 +1,70 @@
 {
-    "projects":[],
-    "categories":[
-        {
-            "id": 1,
-            "name":"Infra"
-        },
-        {
-            "id": 2,
-            "name":"Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name":"Marketing"
-        },
-        {
-            "id": 4,
-            "name":"Planejamento"
-        },
-        {
-            "id": 5,
-            "name":"Treinamento"
-        }
-        
-    ]
+  "projects": [
+    {
+      "name": "Nikolas",
+      "budget": "600",
+      "category": {
+        "id": "3",
+        "name": "Marketing"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "Bode",
+      "budget": "50000",
+      "category": {
+        "id": "5",
+        "name": "Treinamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Bruno",
+      "budget": "60000",
+      "category": {
+        "id": "5",
+        "name": "Treinamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "Joris",
+      "budget": "60000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Marketing"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    },
+    {
+      "id": 5,
+      "name": "Treinamento"
+    }
+  ]
 }
