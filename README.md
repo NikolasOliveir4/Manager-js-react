@@ -1,5 +1,5 @@
 # Projeto Costs(um sistema de controle de projetos)
-<img src='./readme/home.jpg'>
+<img src='./readme/home.jpg'/>
 ## Scripts disponíveis 
 
 No diretório do projeto, você pode executar:
