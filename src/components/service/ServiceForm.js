@@ -2,21 +2,34 @@ import { useState } from 'react'
 
 import Input from '../form/input'
 import SubmitButton from '../form/SubmitButton'
+import Message from '../layouts/Message'
 
 import styles from '../project/ProjectForm.module.css'
 
 function ServiceForm({handleSubmit, btnText, projecData}){
 
     const [service,setService] = useState({})
+    const [message, setMessage] = useState()
+    const [type, setType] = useState()
 
     function submit(e){
+        
         e.preventDefault()
+        if(service.cost == '' || service.name == null || service.description == null ){
+            setMessage('Preencha todos os campos')
+            setType('error')
+            
+        }
+        else{
         projecData.services.push(service)
         handleSubmit(projecData)
     }
+    }
+
 
     function handleChange(e){
         setService({...service,[e.target.name]: e.target.value})
+        
     }
 
     return(
@@ -43,6 +56,7 @@ function ServiceForm({handleSubmit, btnText, projecData}){
                 handleOnChange={handleChange}
             />
             <SubmitButton text={btnText} />
+            {message && <Message type={type} msg={message} />}
         </form>
     )
 }

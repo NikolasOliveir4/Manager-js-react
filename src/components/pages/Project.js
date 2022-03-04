@@ -5,16 +5,20 @@ import Message from '../layouts/Message'
 import ServiceForm from '../service/ServiceForm'
 import ServiceCard from '../service/ServiceCard'
 
+
 import {parse, v4 as uuidv4} from "uuid"
 
 import styles from './Project.module.css'
 
 import {useParams} from 'react-router-dom'
 import {useState, useEffect} from 'react'
+import LinkButton from '../layouts/LinkButton'
 
 function Project(){
 
     const {id} = useParams()
+
+    
 
     const [project, setProject] = useState([])
     const [services, setServices] = useState([])
@@ -114,7 +118,7 @@ function Project(){
     }
 
     function removeService(id, cost){
-
+        setMessage('')
         const serviceUpdate = project.services.filter(
             (service) => service.id !== id
         )
@@ -148,6 +152,8 @@ function Project(){
     function toggleServiceForm(){
         setShowServiceForm(!showServiceForm)
     }
+    
+   
 
     return(
         <>
@@ -167,10 +173,14 @@ function Project(){
                                 </p>
 
                                 <p>
-                                    <span>Total Orçamento:</span> R${project.budget}
+                                 <span>Total Orçamento Inicial:</span> R${project.budget}
+                                </p>
+                                <p>
+                                 <span>Total Orçamento Restante:</span> R${project.budget-project.cost}
                                 </p>
                                 <p>
                                     <span>Total utilizado:</span> R${project.cost}
+                                    {console.log(project.cost)}
                                 </p>
                             </div>
                         ) : (
@@ -214,10 +224,15 @@ function Project(){
                         {services.length === 0 && <p>Não há serviços cadastrados.</p>
 
                         }
-                        
+                   
+                     
+                   
                     </Container>
-
+                    
                 </Container>
+                <div className={styles.voltar}>
+                    <LinkButton to='/projects' text='Voltar' className={styles.btn}/>
+                </div>   
             </div>
         ) : (
             <Loading />

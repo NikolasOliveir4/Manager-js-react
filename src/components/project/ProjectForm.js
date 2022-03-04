@@ -30,16 +30,19 @@ function ProjectForm({handleSubmit ,btnText, projectData}){
     
 
     const submit = (e) => {
+        
         e.preventDefault() 
-        setMessage('')
 
         if(project.category == null || project.name == ''|| project.budget == null){
             setMessage('Preencha todos os campos')
             setType('error')
+           
         }
         else{
            handleSubmit(project)
         }
+        return () => setMessage('')
+        
 
         
         

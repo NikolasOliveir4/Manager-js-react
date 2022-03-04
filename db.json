@@ -1,39 +1,5 @@
 {
-  "projects": [
-    {
-      "name": "Construção",
-      "budget": "55000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "Teste ",
-      "budget": "100000",
-      "category": {
-        "id": "3",
-        "name": "Marketing"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "Construção",
-      "budget": "50000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": 1,
